@@ -1,0 +1,36 @@
+###########################
+# UaModeler Project File  #
+# Generated at 10.06.2025 #
+###########################
+
+PROJECTNAME = CNC
+
+TEMPLATESET = ($TEMPLATES)/net/v4_1/t1/net_server.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    cnc.ua
+
+VARIABLES+= cnc.ua: Namespace=its; Organization=its; 
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    cnc.ua: #008000
+
+PROJECTVARIABLES += GenerateDefaultApplication = false \
+    LegacyOutput = false \
+    NetFramework = 4.6.2 \
+    NoMethodFiles = false \
+    ProjectNamespace = CNC \
+    ProjectOrganization =  \
+    PubSubMqttJson = false \
+    RolesAndUsers = false
+
+OUTPUTPATH = output
+
+GENERATE += cnc.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+
